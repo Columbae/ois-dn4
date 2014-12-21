@@ -13,6 +13,7 @@
 	  	</style>
 	</head>
 	<body>
+	    background-color: #fff;
 		<div class="page-header"><h2>Patient Data Sheet <small>EhrScape platform</small></h2></div>
 		<div class="row">
 		    <div class="col-lg-8 col-md-8 col-sm-8">
@@ -25,16 +26,17 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<div class="row">
-							<div class="col-lg-9 col-md-9 col-sm-9"><b>Pregled</b> meritev <b>vitalnih znakov</b> bolnika</div>
+							<div class="col-lg-6 col-md-6 col-sm-6"><b>Pregled</b> meritev <b>vitalnih znakov</b> bolnika</div>
+						    <div class="col-lg-3 col-md-3 col-sm-3"><button type="button" class="btn btn-warning btn-s btn-block" onclick="readMeasurementsVitals()">Problematic pulse</button><span id="readMeasurementsVitalsMsg"></span></div>
 							<div class="col-lg-3 col-md-3 col-sm-3"><select class="form-control input-sm" id="readEHRidForVitals"><option value=""></option><option value="83dc1b6a-bfa7-4a22-85cd-9e139146205a">Test User1</option><option value="6585869a-23fb-4f93-bcea-caf6bd6994d3">Test User2</option></select></div>
-						</div>
+				        </div>
 					</div>				
 					<div class="panel-body">
 						<span class="label label-default">EHR ID</span><input id="meritveVitalnihZnakovEHRid" type="text" class="form-control input-mini" placeholder="6585869a-23fb-4f93-bcea-caf6bd6994d3">
-						<button type="button" class="btn btn-primary btn-xs" onclick="readMeasurementsVitals('telesna temperatura')">Preberi meritve vitalnih znakov</button><span id="readMeasurementsVitalsMsg"></span>
+						<button type="button" class="btn btn-primary btn-s" onclick="readLastVitals()">Last vitals measurements</button><span id="readMeasurementsVitalsMsg"></span>
 						<div id="rezultatMeritveVitalnihZnakov"></div>
 				  	</div>
-				</div>			
+				</div>	
 			</div>
 		</div>
 	</body>
