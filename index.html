@@ -3,21 +3,19 @@
 <html>
 	<head>
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	    <title>EhrScape - Vnos in poizvedovanje po EHR podatkih</title>
+	    <title>EhrScape - Vnos EHR podatkov</title>
 	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	    <script src="demo.js"></script>
 	    <style>
 	  		body {padding: 10px;}
-	  		.btn {margin-top: 10px;}
-	  		.obvestilo {margin-left:10px;}
 	  	</style>
 	</head>
 	<body>
-		<div class="page-header"><h2>Vnos in poizvedovanje po EHR podatkih <small>EhrScape platforma</small></h2></div>
+		<div class="page-header"><h2>Vnos EHR podatkov <small>EhrScape platforma</small></h2></div>
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="col-lg-6 col-md-4 col-sm-2">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<div class="row">
@@ -33,7 +31,7 @@
 				  	</div>
 				</div>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="col-lg-6 col-md-4 col-sm-4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<div class="row">
@@ -49,7 +47,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="col-lg-6 col-md-4 col-sm-4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<div class="row">
@@ -59,10 +57,7 @@
 					</div>				
 					<div class="panel-body">
 						<span class="label label-default">EHR ID</span><input id="dodajVitalnoEHR" type="text" class="form-control input-mini" placeholder="7b661e12-3a98-21ad-c29e-2dc9f5a3d885">
-						<span class="label label-default">Datum in ura</span><input id="dodajVitalnoDatumInUra" type="text" class="form-control input-mini" placeholder="2014-11-21T11:40Z">
-						<span class="label label-default">Telesna višina</span><div class="input-group"><input id="dodajVitalnoTelesnaVisina" type="text" class="form-control input-mini" placeholder="185"><span class="input-group-addon">cm</span></div>
-						<span class="label label-default">Telesna teža</span><div class="input-group"><input id="dodajVitalnoTelesnaTeza" type="text" class="form-control input-mini" placeholder="80.00"><span class="input-group-addon">kg</span></div>
-						<span class="label label-default">Telesna temperatura</span><div class="input-group"><input id="dodajVitalnoTelesnaTemperatura" type="text" class="form-control input-mini" placeholder="36.50"><span class="input-group-addon">°C</span></div>
+						<span class="label label-default">Datum in ura</span><input id="dodajVitalnoDatumInUra" type="text" class="form-control input-mini" placeholder="YYYY-MM-DDT11:40Z">
 						<span class="label label-default">Sistolični krvni tlak</span><div class="input-group"><input id="dodajVitalnoKrvniTlakSistolicni" type="text" class="form-control input-mini" placeholder="118"><span class="input-group-addon">mm Hg</span></div>
 						<span class="label label-default">Diastolični krvni tlak</span><div class="input-group"><input id="dodajVitalnoKrvniTlakDiastolicni" type="text" class="form-control input-mini" placeholder="92"><span class="input-group-addon">mm Hg</span></div>
 						<span class="label label-default">Nasičenost krvi s kisikom</span><div class="input-group"><input id="dodajVitalnoNasicenostKrviSKisikom" type="text" class="form-control input-mini" placeholder="98"><span class="input-group-addon">%</span></div>
@@ -71,7 +66,7 @@
 				  	</div>
 				</div>
 			</div>	
-			<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="col-lg-6 col-md-4 col-sm-4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<div class="row">
