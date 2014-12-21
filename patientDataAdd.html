@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <title>EhrScape - Vnos EHR podatkov</title>
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	    <script src="patientDataAdd.js"></script>
+	    <style>
+	  		body {padding: 10px;}
+	  	</style>
+	</head>
+	<body>
+		<div class="page-header"><h2>Patient Vitals Data Entry <small>EhrScape platform</small></h2></div>
+		<div class="row">
+		    <div class="col-lg-8 col-md-8 col-sm-8">
+					<button type="button" class="btn btn-primary" onclick="parent.location='patientData.html'">Back</button>
+		    </div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-4 col-sm-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-lg-8 col-md-8 col-sm-8"><b>Vnos</b> meritve <b>vitalnih znakov</b> bolnika</div>
+							<div class="col-lg-4 col-md-4 col-sm-4"><select class="form-control input-sm" id="readExistingVitals"><option value=""></option><option value="83dc1b6a-bfa7-4a22-85cd-9e139146205a|2014-12-21T23:55|78|10|83.5">Test User1</option></option><option value="6585869a-23fb-4f93-bcea-caf6bd6994d3|2014-12-21T19.10|66|20|93.5">Test User2</option></select></div>
+						</div>
+					</div>				
+					<div class="panel-body">
+						<span class="label label-default">EHR ID</span><input id="addVitalEHR" type="text" class="form-control input-mini" placeholder="7b661e12-3a98-21ad-c29e-2dc9f5a3d885">
+						<span class="label label-default">Date in time</span><input id="addVitalDateAndTime" type="text" class="form-control input-mini" placeholder="YYYY-MM-DDT11:40Z">
+						<span class="label label-default">Pulse</span><div class="input-group"><input id="addVitalPulse" type="text" class="form-control input-mini" placeholder="60"><span class="input-group-addon">bpm</span></div>
+						<span class="label label-default">Respiratory rate</span><div class="input-group"><input id="addVitalRespiratoryRate" type="text" class="form-control input-mini" placeholder="22"><span class="input-group-addon">bpm</span></div>
+						<span class="label label-default">Oxygen saturation</span><div class="input-group"><input id="addVitalOxygenSaturation" type="text" class="form-control input-mini" placeholder="97"><span class="input-group-addon">%</span></div>
+                        <button type="button" class="btn btn-primary btn-xs" onclick="addVitalsMeasurements()">Add measurements</button><span id="addVitalsMeasurementsMsg"></span>
+				  	</div>
+				</div>
+			</div>		
+		</div>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+
+<html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <title>EhrScape - Vnos EHR podatkov</title>
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	    <script src="newUser.js"></script>
+	    <style>
+	  		body {padding: 10px;}
+	  	</style>
+	</head>
+	<body>
+		<div class="page-header"><h2>Vnos EHR podatkov <small>EhrScape platforma</small></h2></div>
+		<div class="row">
+		    <div class="col-lg-8 col-md-8 col-sm-8">
+					<button type="button" class="btn btn-primary" onclick="parent.location='index.html'">Back</button>
+		    </div>
+		</div>
+		<div class="row">
+			<div class="col-center-block">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-lg-8 col-md-8 col-sm-8"><b>Kreiraj EHR zapis</b> za novega bolnika</div>
+						</div>
+					</div>
+					<div class="panel-body">
+						<span class="label label-default">Ime</span><input id="createName" type="text" class="form-control input-mini" placeholder="Osama">
+						<span class="label label-default">Priimek</span><input id="createSurname" type="text" class="form-control" placeholder="Bin Laden">
+						<span class="label label-default">Datum rojstva</span><input id="createDOB" type="text" class="form-control" placeholder="1957-03-10T09:08">
+						<button type="button" class="btn btn-primary btn-xs" onclick="createPatientsEHR()">Dodaj osnovne podatke o bolniku</button><span id="createMsg"></span>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
