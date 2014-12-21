@@ -211,7 +211,7 @@ function readMeasurementsVitals() {
 				var party = data.party;
 				$("#rezultatMeritveVitalnihZnakov").html("<br/><span>Pridobivanje zadnjih podatkov za bolnika <b>'" + party.firstNames + " " + party.lastNames + "'</b>.</span><br/><br/>");
 				$.ajax({
-				    url: baseUrl + "/view/" + ehrId + "/pulse",
+				    url: baseUrl + "/view/" + ehrId + "/pulse/",
 				    type: 'GET',
 				    headers: {
 				        "Ehr-Session": sessionId
@@ -220,16 +220,37 @@ function readMeasurementsVitals() {
 				
 				    	if (res.length > 0) {
 				    		console.log(res);
-				    		var bp = res[0].time + "    " + res[0].pulse + "/" + res[0].respiratory + " " + res[0].indirect_oximetry;
+				    		var bp = "Last measurement at" res[0].time + "| pulse rate:" + res[0].pulse;
 							$("#rezultatMeritveVitalnihZnakov").append(bp);
 				    	} else {
+				    		console.log(res);
 				    		$("#readMeasurementsVitalsMsg").html("<span class='obvestilo label label-warning fade-in'>Ni podatkov!</span>");
+				    		return;
 				    	}
-				        /*res.forEach(function (el, i, arr) {
-				            var date = new Date(el.time);
-				            el.date = date.getTime();
-				        });*/
-				
+				    }
+				});	
+				$.ajax({
+				    url: baseUrl + "/view/" + ehrId + "/respirations",
+				    type: 'GET',
+				    headers: {
+				        "Ehr-Session": sessionId
+				    },
+				    success: function (res) {
+			    		console.log(res);
+			    		var bp = "| respiratory rate:" + res[0].respirations;
+						$("#rezultatMeritveVitalnihZnakov").append(bp);
+				    }
+				});
+				$.ajax({
+				    url: baseUrl + "/view/" + ehrId + "/spO2",
+				    type: 'GET',
+				    headers: {
+				        "Ehr-Session": sessionId
+				    },
+				    success: function (res) {
+			    		console.log(res);
+			    		var bp = "| Oxygen saturation:" + res[0].spO2.toFixed(1);
+						$("#rezultatMeritveVitalnihZnakov").append(bp);
 				    }
 				});
 	    	},

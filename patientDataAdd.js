@@ -38,8 +38,11 @@ function addVitalsMeasurements() {
 		    "ctx/time": dateAndTime,
 		    "vital_signs/pulse:0/any_event:0/rate|magnitude":pulse,
 		    "vital_signs/pulse:0/any_event:0/rate|unit":"/min",
-		    "vital_signs/respirations:0/any_event:0/rate|magnitude":respiratory,
+		    "vital_signs/respirations:0/any_event:0/rate|magnitude":134.0,
 		    "vital_signs/respirations:0/any_event:0/rate|unit":"/min",
+		    "vital_signs/respirations:0/any_event:0/rhythm|code":"at0006",
+		    "vital_signs/respirations:0/any_event:0/depth|code":"at0019",
+		    "vital_signs/respirations:0/any_event:0/description":"Description 46",
 		   	//"vital_signs/body_temperature/any_event/temperature|magnitude": peakFlow,
 		    "vital_signs/indirect_oximetry:0/spo2|numerator": oxygenSaturation
 		};
@@ -57,6 +60,7 @@ function addVitalsMeasurements() {
 		    success: function (res) {
 		    	console.log(res.meta.href);
 		    	console.log(res + respiratory + oxygenSaturation);
+		    	console.log(podatki);
 		        $("#addVitalsMeasurementsMsg").html("<span class='obvestilo label label-success fade-in'>" + res.meta.href + ".</span>");
 		    },
 		    error: function(err) {
